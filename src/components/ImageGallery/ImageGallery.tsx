@@ -1,18 +1,10 @@
 import ImageCard from "../ImageCard/ImageCard";
 import s from "./ImageGallery.module.css";
 
-type GalleryItem = {
-  id: string;
-  likes: number;
-  alt_description: string;
-  urls: {
-    regular: string;
-    small: string;
-  };
-};
+import { Image } from "../../search-img-api"
 
 type Props = {
-  galleryList: GalleryItem[];
+  galleryList: Image[];
   openModalFu: (imgURL: string) => void;
 };
 

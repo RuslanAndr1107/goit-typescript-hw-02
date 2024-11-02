@@ -9,18 +9,9 @@ import LoadMoreButton from "./components/LoadMoreButton/LoadMoreButton.jsx";
 import ImageModal from "./components/ImageModal/ImageModal.jsx";
 import Modal from "react-modal";
 
-type serverObject = {
-  id: string;
-  likes: number;
-  alt_description: string;
-  urls: {
-    regular: string;
-    small: string;
-  };
-}
-
+import { Image } from "./search-img-api.ts";
 const App = () => {
-  const [serverData, setServerData] = useState<serverObject[]>([]);
+  const [serverData, setServerData] = useState<Image[]>([]);
   const [loader, setLoader] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const [page, setPage] = useState<number>(1);
